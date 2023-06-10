@@ -11,8 +11,6 @@ function donorSearch(search) {
         item.blood_recipients = item.blood_recipients.join(', ');
    });
 
-    const lastDonation1 = blood_donor.lastDonation;
-
  
         
    // SEARCH E NIRDISTO VALUE DIYE SEARCH DEOWAR JONNO SWITCH CASE USE KORA HOYECHE, 

@@ -8,8 +8,8 @@ const blood_donor = [
       address: 'Dhaka',
       mobile: '01711111111',
       bloodGroup: 'A+',
-      lastDonation_Day: 150,
-      lastDonationDate: "10/02/2023",
+      lastDonation_Day: 110,
+      lastDonationDate: "24/02/2023",
       blood_recipients: ['Jamal', 'Kamal']
   
     },
@@ -20,8 +20,8 @@ const blood_donor = [
       address: 'Rajshahi',
       mobile: '017231111111',
       bloodGroup: 'A+',
-      lastDonation_Day: 175,
-      lastDonationDate: "23/12/2022",
+      lastDonation_Day: 150,
+      lastDonationDate: "10/02/2023",
       blood_recipients: ['Sharmin', 'Sadia']
   
     },
@@ -92,8 +92,8 @@ const blood_donor = [
       address: 'Sylhet',
       mobile: '01723456782',
       bloodGroup: 'B-',
-      lastDonation_Day: 145,
-      lastDonationDate: "15/02/2023",
+      lastDonation_Day: 106,
+      lastDonationDate: "20/02/2023",
       blood_recipients: ['Ahmed']
     },
     {

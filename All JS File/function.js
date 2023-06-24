@@ -15,7 +15,7 @@ function donorSearch(search) {
    // SEARCH E NIRDISTO VALUE DIYE SEARCH DEOWAR JONNO SWITCH CASE USE KORA HOYECHE, 
     switch (search) {
 
-        // FILTER WITH ID
+        // FILTER WITH All Donor
         case 'All Donor':
             result = blood_donor;
             break;  
@@ -52,63 +52,64 @@ function donorSearch(search) {
 
 
 
-        // Filter donors with lastDonation_Day more than 120 days
-        console.log('\n People who are available:');
-            const filteredResult = result.filter((item) => item.lastDonation_Day >= 120);
+    // Filter donors with lastDonation_Day more than 120 days
+    console.log('\n People who are available:');
+    const filteredResult = result.filter((item) => item.lastDonation_Day >= 120);
 
-            console.table( filteredResult );
-        //-------------------------- End Table lastDonation_Day more than 120 days -------------------------
+        console.table( filteredResult );
 
-
-
-        // Filter donors who will be available within 1 to 30 days
-        const availableResult = result.filter((item) => item.lastDonation_Day <= 120 && item.lastDonation_Day >= 90);
-            console.log('\n\n\n People who will be available within some days: ');
-
-        //Show result in console table who will be available within 1 to 30 days
-        const availableResultFinal = availableResult.map((item) =>{
-
-            const day_wait = 120 - item.lastDonation_Day;
-
-            return {
-                'Will be available after': day_wait + ' Days',
-                id: item.id,
-                Name: item.name,
-                age: item.age,
-                bloodGroup: item.bloodGroup,
-                mobile: item.mobile,
-                address: item.address,
-            };
-        });
-        console.table( availableResultFinal );
-
-//-------------------------- End Table who will be available within 1 to 30 days -------------------------
+    //-------------------------- End Table lastDonation_Day more than 120 days -------------------------
 
 
 
-        //Show result in console table who will be available within 1 to 30 days
-        console.log('\n\n\n Donors History ');
+    // Filter donors who will be available within 1 to 30 days
+    const availableResult = result.filter((item) => item.lastDonation_Day <= 120 && item.lastDonation_Day >= 90);
+        console.log('\n\n\n People who will be available within some days: ');
 
-        const search_history = result.map((item) =>{
+    //Show result in console table who will be available within 1 to 30 days
+    const availableResultFinal = availableResult.map((item) =>{
 
-            return {
-                id: item.id,
-                Name: item.name,
-                bloodGroup: item.bloodGroup,
-                'Last donation (Days)': item.lastDonation_Day + ' Days before',
-                'Last donation (Date)': item.lastDonationDate ,
-                'Blood Recipients': item.blood_recipients ,
-                mobile: item.mobile,
-            };
-        });
-        console.table( search_history );
+        const day_wait = 120 - item.lastDonation_Day;
 
-//-------------------------- End Table who will be available within 1 to 30 days -------------------------
+        return {
+            'Will be available after': day_wait + ' Days',
+            id: item.id,
+            Name: item.name,
+            age: item.age,
+            bloodGroup: item.bloodGroup,
+            mobile: item.mobile,
+            address: item.address,
+        };
+    });
+    console.table( availableResultFinal );
+
+    //-------------------------- End Table who will be available within 1 to 30 days -------------------------
+
+
+
+    //Show result in console table who will be available within 1 to 30 days
+    console.log('\n\n\n Donors History: ');
+
+    const search_history = result.map((item) =>{
+
+        return {
+            id: item.id,
+            Name: item.name,
+            bloodGroup: item.bloodGroup,
+            'Last donation (Days)': item.lastDonation_Day + ' Days before',
+            'Last donation (Date)': item.lastDonationDate ,
+            'Blood Recipients': item.blood_recipients ,
+            mobile: item.mobile,
+        };
+    });
+    console.table( search_history );
+
+    //-------------------------- End Table who will be available within 1 to 30 days -------------------------
 
 }
 
 
-
+//----------------------- END FUNCTION FOR SEARCH -------------------------
 
 
 
